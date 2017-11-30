@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="gec-El-2rt">
+            <objects>
+                <navigationController storyboardIdentifier="SB_SECOND" id="njS-bh-MfG" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NMh-lN-QU3">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="2xM-GU-spc" kind="relationship" relationship="rootViewController" id="bSz-qq-C9j"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1oS-1V-Jsv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-945" y="411"/>
+        </scene>
+        <!--Second Controller-->
+        <scene sceneID="igt-J4-nko">
+            <objects>
+                <viewController id="2xM-GU-spc" customClass="SecondController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="H5l-gL-VAY"/>
+                        <viewControllerLayoutGuide type="bottom" id="KuB-RX-8qK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qjm-ql-aCd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="okD-k4-bge">
+                                <rect key="frame" x="36" y="84" width="31" height="30"/>
+                                <state key="normal" title="回去"/>
+                                <connections>
+                                    <action selector="back:" destination="2xM-GU-spc" eventType="touchUpInside" id="2rm-0o-eGu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="okD-k4-bge" firstAttribute="top" secondItem="H5l-gL-VAY" secondAttribute="bottom" constant="20" id="Q7S-v0-cGJ"/>
+                            <constraint firstItem="okD-k4-bge" firstAttribute="leading" secondItem="Qjm-ql-aCd" secondAttribute="leadingMargin" constant="20" id="hAf-wm-rAL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Sso-Xv-FuG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bv3-EZ-YlT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-106" y="411"/>
+        </scene>
+    </scenes>
+</document>
